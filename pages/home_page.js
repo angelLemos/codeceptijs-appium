@@ -29,6 +29,20 @@ module.exports = {
   checkLoginSuccess() {
     I.waitForElement(this.button.save, 5)
     I.seeElement(this.button.save)
+  },
+
+  scroll() {
+    I.touchPerform([
+      {
+        action: 'longPress',
+        options: { x: 300, y: 1100 }
+      },
+      {
+        action: 'moveTo',
+        options: { x: 300, y: 250 }
+      },
+      { action: 'release' }
+    ])
   }
   
 }

@@ -9,8 +9,16 @@ exports.config = {
       desiredCapabilities: {
         appPackage: 'com.qazandoapp',
         appActivity: 'MainActivity',
-        deviceName: 'pixel',
+        deviceName: 'pixel2',
         platformVersion: '9'
+
+      // ======  Execução via navegador Chrome ====== //
+      //   platform: 'Android',
+      //        desiredCapabilities: {
+      //          deviceName: 'pixel2',
+      //          platformVersion: '9',
+      //          automationName: 'UiAutomator2',
+      //          browserName: 'Chrome'
       }
     }
   },
@@ -53,5 +61,5 @@ exports.config = {
     }
   ],
   name: 'automation-codecept',
-  tests: './steps/*_test.js'
+  tests: './steps/students_test.js',
 }

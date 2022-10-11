@@ -6,7 +6,7 @@
   "scripts": {
     "android": "codeceptjs run --reporter mochawesome -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"platform\": \"Android\", \"app\": \"C:\\Users\\AngelicaLemosdeJesus\\Documents\\CursoCodeceptJS\\Aula13\\app-release.apk\", \"desiredCapabilities\": { \"appPackage\": \"com.qazandoapp\", \"appActivity\": \"MainActivity\", \"deviceName\": \"pixel\", \"platformVersion\": \"9\" }}}} ' ",
     "ios": "npx codeceptjs run --reporter mochawesome -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"platform\": \"iOS\", \"app\": \"/Users/qazando/Documents/qazandoapp.app\", \"desiredCapabilities\": { \"deviceName\": \"iPhone 11 Pro Max\", \"platformVersion\": \"13.1\" }}}} ' --debug ",
-    "test": "npx codeceptjs run --steps"
+    "test": "npx codeceptjs run --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",

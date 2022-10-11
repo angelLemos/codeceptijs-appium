@@ -1,4 +1,4 @@
-Feature('Login');
+Feature('Login').tag('@login');
 
 const { I, login_page } = inject()
 
@@ -21,10 +21,9 @@ After(() => {
 Scenario('Login with success', ({home_page}) => {
     login_page.doLogin('teste@teste.com', '123456')
     home_page.checkLoginSuccess()
-});
+}).tag('@login_success');
 
 Scenario('Login with error', () => {
     login_page.doLogin('xteste@teste.com', '123456')
     login_page.checkLoginError()
-});
-
+}).tag('@login_error');
