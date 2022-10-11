@@ -1,0 +1,23 @@
+{
+  "name": "automation-codecept",
+  "version": "1.0.0",
+  "description": "Projeto de testes automatizados",
+  "main": "index.js",
+  "scripts": {
+    "android": "codeceptjs run --reporter mochawesome -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"platform\": \"Android\", \"app\": \"C:\\Users\\AngelicaLemosdeJesus\\Documents\\CursoCodeceptJS\\Aula13\\app-release.apk\", \"desiredCapabilities\": { \"appPackage\": \"com.qazandoapp\", \"appActivity\": \"MainActivity\", \"deviceName\": \"pixel\", \"platformVersion\": \"9\" }}}} ' ",
+    "ios": "npx codeceptjs run --reporter mochawesome -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"platform\": \"iOS\", \"app\": \"/Users/qazando/Documents/qazandoapp.app\", \"desiredCapabilities\": { \"deviceName\": \"iPhone 11 Pro Max\", \"platformVersion\": \"13.1\" }}}} ' --debug ",
+    "test": "npx codeceptjs run --steps"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.3.6",
+    "mochawesome": "^7.1.3",
+    "node-random-name": "^1.0.1",
+    "random-number": "^0.0.9",
+    "webdriverio": "^7.25.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
+}
